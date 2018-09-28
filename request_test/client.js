@@ -14,7 +14,7 @@ function sendRequest() {
 		console.log(res.statusCode);
 	});
 	req.on("error", function (err) {
-		console.error(err.message);
+		console.error(err.stack);
 	});
 	req.end();
 }
