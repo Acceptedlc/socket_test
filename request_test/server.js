@@ -13,4 +13,8 @@ server.on("request", function (req, res) {
 
 });
 
+server.on("clientError", function (err) {
+	console.log(err)
+})
+
 server.listen(3000);
