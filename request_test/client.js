@@ -14,10 +14,11 @@ function sendRequest() {
 		console.log(res.statusCode);
 	});
 	req.on("error", function (err) {
-		console.log(err.message);
+		console.error(err.message);
 	});
 	req.end();
 }
 
-sendRequest();
-sendRequest();
+for(let i = 0; i < 2000; i++) {
+	sendRequest();
+}
